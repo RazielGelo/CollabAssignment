@@ -1,0 +1,22 @@
+const express = require('express');
+const router = express.Router();
+
+/* GET index page. */
+router.get('/', function(req, res, next) {
+    res.render('index',
+        {
+            title: `Random: ${ Math.random() }`
+        }
+    );
+});
+
+/* GET home page. */
+router.get('/home', function(req, res, next) {
+    res.render('home',
+        {
+            
+        }
+    );
+});
+
+module.exports = router;
